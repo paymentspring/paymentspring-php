@@ -14,7 +14,7 @@ PaymentSpring API keys are required.  You can obtain your own by [registering fo
 
 ### Usage
 
-```
+```php
   // Set your API Keys 
   \PaymentSpring\PaymentSpring::setApiKeys(YOUR_PUBLIC_KEY, YOUR_PRIVATE_KEY);
 ```
