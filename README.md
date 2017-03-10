@@ -12,6 +12,13 @@ PaymentSpring API keys are required.  You can obtain your own by [registering fo
 
 ### Installation
 
+### Usage
+
+```
+  // Set your API Keys 
+  \PaymentSpring\PaymentSpring::setApiKeys(YOUR_PUBLIC_KEY, YOUR_PRIVATE_KEY);
+```
+
 ### Frequently Asked Questions
 
 **How do I get support?**
