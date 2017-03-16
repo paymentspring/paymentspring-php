@@ -58,6 +58,52 @@
           <?php print_r(\PaymentSpring\Plan::listPlans()); ?>      
         </code>
       </pre>
+
+      <b>Subscribe a customer</b>
+      <pre>
+        <code class="php hljs">
+          $planID = 5;
+          $customerID = "bff79e"
+          $options = array("ends_after" => 12, "bill_immediately" => true);
+          $plans = \PaymentSpring\Plan::subscribeCustomer($planID, $customerID, $options);      
+        </code>
+      <pre>
+      <?php if($_POST["_demo_subscription"]): ?>
+        <?php
+          $subscription = $_POST["_demo_subscription"];
+          $options = $subscription["options"];
+          $planID = $subscription["plan_id"];
+          $customerID = $subscription["customer_id"];
+        ?>
+        <h3>Response:</h3>
+        <a href="">Reset</a>
+        <pre>
+          <code class="json hljs">
+            <?php print_r(\PaymentSpring\Plan::subscribeCustomer($planID, $customerID, $options)); ?> 
+          </code>
+        </pre>
+      <?php endif; ?>
+      Test this code with the form:
+      <form method="post" action="#plans" class="pretty-form"> 
+        <select name="_demo_subscription[options][frequency]">
+          <option value="daily">Daily</option>
+          <option value="weekly">Weekly</option>
+          <option value="monthly">Monthly</option>
+        </select>
+        <select name="_demo_subscription[plan_id]">
+          <?php $plans = \PaymentSpring\Plan::listPlans(); ?>
+          <?php foreach($plans->list as $plan): ?> 
+            <option value="<?php echo $plan->id?>"><?php echo $plan->name ?></option>
+          <?php endforeach; ?>
+        </select>
+        <select name="_demo_subscription[customer_id]">
+          <?php $customers = \PaymentSpring\Customer::listCustomers(); ?>
+          <?php foreach($customers->list as $customer): ?> 
+            <option value="<?php echo $customer->id?>"><?php echo $customer->last_name ?></option>
+          <?php endforeach; ?>
+        </select>
+        <input type="submit" value="Subscribe Customer">
+      </form>
     </div>
 
     <div class="api-section" id="charges">

@@ -6,6 +6,7 @@
       if($amount){
         $cardDetails["amount"] = $amount;
       }
-      return PaymentSpring::makeRequest("charge", $cardDetails, true);
+      $response = PaymentSpring::makeRequest("charge", $cardDetails, true);
+      return json_decode($response);
     }
   }

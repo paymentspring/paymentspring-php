@@ -13,7 +13,7 @@ class PaymentSpring {
     self::$privateKey = $privateKey;
   }
 
-  public static function makeRequest($path, $params, $isPost = false){
+  public static function makeRequest($path, $params = array(), $isPost = false){
     $process = curl_init();
     $curlOptions = array(
       CURLOPT_RETURNTRANSFER => 1,
