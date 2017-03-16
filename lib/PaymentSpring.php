@@ -13,14 +13,14 @@ class PaymentSpring {
     self::$privateKey = $privateKey;
   }
 
-  public static function makeRequest($path, $params, $type = "GET"){
+  public static function makeRequest($path, $params, $isPost = false){
     $process = curl_init();
     $curlOptions = array(
       CURLOPT_RETURNTRANSFER => 1,
       CURLOPT_URL => self::$apiBaseURL . $path,
       CURLOPT_HTTPHEADER => array('Authorization: Basic '. base64_encode( self::$privateKey . ":" ) )
     );
-    if($type == "POST"){
+    if($isPost){
       $curlOptions = self::constructPostRequest($curlOptions, $params);
     }    
     curl_setopt_array($process, $curlOptions);

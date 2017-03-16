@@ -2,8 +2,10 @@
   namespace PaymentSpring;
 
   class Customer{
-    public function __construct($name){
-      echo "hello " . $name; 
-    }    
+
+    public static function createCustomer($customerDetails){
+      return PaymentSpring::makeRequest("customers", $customerDetails, true);
+    }
+
   }
   
