@@ -147,7 +147,7 @@
       <form method="post" action="#customers" class="pretty-form"> 
         <input type="text" placeholder="First Name" name="_demo_new_customer[first_name]" value="John">
         <input type="text" placeholder="Last Name" name="_demo_new_customer[last_name]" value="Candy">
-        <input type="email" placeholder="Email" name="_demo_new_customer[last_name]" value="jcandy@pronto.ca">
+        <input type="email" placeholder="Email" name="_demo_new_customer[email]" value="jcandy@pronto.ca">
         <input type="text" placeholder="CC Number" name="_demo_new_customer[card_number]" value="4111111111111111">
         <input type="text" placeholder="Expire Month" name="_demo_new_customer[card_exp_month]" value="12">
         <input type="text" placeholder="Expiry Year" name="_demo_new_customer[card_exp_year]" value="2020">
