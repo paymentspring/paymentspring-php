@@ -1,9 +1,7 @@
 <?php
 
-  // Initialize Payment Spring Singleton
-  require(dirname(__FILE__) . '/payment-spring/PaymentSpring.php');
+  require(dirname(__FILE__) . '/src/PaymentSpring.php');
 
-  // API Endpoints
-  require(dirname(__FILE__) . '/payment-spring/Customer.php');
-  require(dirname(__FILE__) . '/payment-spring/Charge.php');
-  require(dirname(__FILE__) . '/payment-spring/Plan.php');
+  require(dirname(__FILE__) . '/src/Customer.php');
+  require(dirname(__FILE__) . '/src/Charge.php');
+  require(dirname(__FILE__) . '/src/Plan.php');

@@ -1,0 +1,21 @@
+{
+    "name": "payment-spring/payment-spring-php",
+    "description": "PHP Wrapper for PaymentSpring API",
+    "keywords": ["payments", "payment-spring", "wordpress-payments"],
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Noah Kochanowicz",
+            "email": "noahtkoch@gmail.com"
+        }
+    ],
+    "type": "package",
+    "require": {
+      "php": ">=5.4"
+    },
+	  "autoload": {
+      "files": [
+        "init.php"
+      ]
+    }
+}
