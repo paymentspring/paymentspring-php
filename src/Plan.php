@@ -12,4 +12,9 @@
       $response = PaymentSpring::makeRequest($requestPath, $options, true);
       return json_decode($response);
     }
+
+    public static function createAndSubscribeCustomer($customerDetails, $planId, $options){
+      $customer = \PaymentSpring\Customer::createCustomer($customerDetails); 
+      return self::subscribeCustomer($planId, $customer->id, $options);
+    }
   }
