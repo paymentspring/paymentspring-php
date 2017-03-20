@@ -15,6 +15,10 @@
 
     public static function createAndSubscribeCustomer($customerDetails, $planId, $options){
       $customer = \PaymentSpring\Customer::createCustomer($customerDetails); 
-      return self::subscribeCustomer($planId, $customer->id, $options);
+      if($customer && isset($customer->id)){
+        return self::subscribeCustomer($planId, $customer->id, $options);
+      }else{
+        return $customer;
+      }
     }
   }
