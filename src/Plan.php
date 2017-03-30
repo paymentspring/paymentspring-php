@@ -18,7 +18,7 @@
       if($customer && isset($customer->id)){
         return self::subscribeCustomer($planId, $customer->id, $options);
       }else{
-        return $customer;
+        return json_decode($customer);
       }
     }
   }
