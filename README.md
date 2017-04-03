@@ -106,7 +106,7 @@ For when you have a new customer and want to subscribe them to a plan at the sam
 	\PaymentSpring\Charge::chargeCustomer(
 		$customerID, 
 		$amountInCents, 
-		$otherParameters
+		$options
 	);
 ```
 
@@ -114,10 +114,11 @@ For when you have a new customer and want to subscribe them to a plan at the sam
 *Note: The API wrapper doesn't have a built in way of creating or fetching tokens. You could, however, use the `makeRequest` function*
 
    **PaymentSpring Token** string   
-   **Amount in Cents** integer 
-
+   **Amount in Cents** integer   
+   **Other Parameters** array *(optional)*
+   
 ```php
-	\PaymentSpring\Charge::chargeToken($token, $amountInCents);
+	\PaymentSpring\Charge::chargeToken($token, $amountInCents, $options);
 ```
 ****
 ### Custom requests
@@ -127,7 +128,7 @@ This takes 2-3 arguments.
 
    **Path to request** string  
    **Parameters** array  
-   **Is Post?** boolean, default false
+   **Is POST?** boolean, default false/GET
 
 
 
