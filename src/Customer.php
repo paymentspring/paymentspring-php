@@ -8,6 +8,11 @@
       return json_decode($response);
     }
 
+    public static function getCustomer($customerId){
+      $response = PaymentSpring::makeRequest("customers/$customerId");
+      return json_decode($response);
+    }
+
     public static function createCustomer($customerDetails){
       $response = PaymentSpring::makeRequest("customers", $customerDetails, true);
       return json_decode($response);

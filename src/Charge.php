@@ -10,13 +10,14 @@
       return json_decode($response);
     }
 
-    public static function chargeCustomer($customerID, $amount, $details = array()){
-      $details["customer_id"] = $customerID;
-      $details["amount"] = $amount;
-      return self::chargeCard($details);
+    public static function chargeCustomer($customerID, $amount, $options = array()){
+      $options["customer_id"] = $customerID;
+      $options["amount"] = $amount;
+      return self::chargeCard($options);
     }
 
-    public static function chargeToken($token, $amount){
-      return self::chargeCard(array("token" => $token), $amount);
+    public static function chargeToken($token, $amount, $options = array()){
+      $options["token"] = $token;
+      return self::chargeCard($options, $amount);
     }
   }

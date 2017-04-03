@@ -7,13 +7,13 @@
       return json_decode($response);
     } 
 
-    public static function subscribeCustomer($planId, $customerId, $options){
+    public static function subscribeCustomer($planId, $customerId, $options = array()){
       $requestPath = "plans/$planId/subscription/$customerId";
       $response = PaymentSpring::makeRequest($requestPath, $options, true);
       return json_decode($response);
     }
 
-    public static function createAndSubscribeCustomer($customerDetails, $planId, $options){
+    public static function createAndSubscribeCustomer($customerDetails, $planId, $options = array()){
       $customer = \PaymentSpring\Customer::createCustomer($customerDetails); 
       if($customer && isset($customer->id)){
         return self::subscribeCustomer($planId, $customer->id, $options);
