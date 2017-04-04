@@ -14,8 +14,8 @@
       "php": ">=5.4"
     },
     "autoload": {
-      "psr-4" : {
-        "PaymentSpring_" : "src/"
+      "psr-0" : {
+        "PaymentSpring" : "src/"
       }
     }
 }
