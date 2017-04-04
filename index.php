@@ -1,6 +1,6 @@
 <?php
   require_once "init.php";
-  \PaymentSpring\PaymentSpring::setApiKeys("PUBLIC_KEY", "PRIVATE_KEY");
+  \PaymentSpring\PaymentSpring::setApiKeys("test_be01893a79b9e45b538342a2394db6b2a3d8734aa0b4d6f935fe404ad4", "test_9791cd9fcf894e5ad9d1eda50d");
 ?>
 
 <html>

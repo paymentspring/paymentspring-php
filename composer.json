@@ -13,9 +13,9 @@
     "require": {
       "php": ">=5.4"
     },
-	  "autoload": {
-      "files": [
-        "init.php"
-      ]
+    "autoload": {
+      "psr-0" : {
+        "PaymentSpring_" : "src/"
+      }
     }
 }
