@@ -1,6 +1,6 @@
 {
     "name": "paymentspring/paymentspring-php",
-    "description": "PHP Wrapper for PaymentSpring",
+    "description": "PHP library for the PaymentSpring API",
     "keywords": ["payments", "api", "paymentspring"],
     "license": "GPL-2.0",
     "authors": [
