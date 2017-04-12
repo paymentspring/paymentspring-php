@@ -1,12 +1,12 @@
 {
-    "name": "payment-spring/payment-spring-php",
-    "description": "PHP Wrapper for PaymentSpring API",
-    "keywords": ["payments", "payment-spring", "wordpress-payments"],
+    "name": "paymentspring/paymentspring-php",
+    "description": "PHP Wrapper for PaymentSpring",
+    "keywords": ["payments", "api", "paymentspring"],
     "license": "GPL-2.0",
     "authors": [
         {
-            "name": "Noah Kochanowicz",
-            "email": "noahtkoch@gmail.com"
+            "name": "PaymentSpring",
+            "email": "support@paymentspring.com"
         }
     ],
     "type": "package",
