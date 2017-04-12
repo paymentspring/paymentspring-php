@@ -10,9 +10,7 @@ Usage examples can be found in the `index.php` file. You can add your own API ke
 
 ## Installation
 
-The easiest way to user this library is with composer. You can run this to add it to your composer.json.
-
-*Add composer information*
+The easiest way to user this library is with composer.
 
 Or, you can clone this repository. You must require the `init.php` file wherever you're going to use the this library. This is not required if you're using composer.
 
