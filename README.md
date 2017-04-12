@@ -1,20 +1,20 @@
-# PaymentSpring PHP API Wrapper
+# PaymentSpring PHP Library
 
 ## Description
 
-[PaymentSpring](https://www.paymentspring.com/) is a credit card processing gateway with a developer friendly API. This API wrapper for PHP is officially supported by PaymentSpring. 
+[PaymentSpring](https://www.paymentspring.com/) is the easiest way to accept payments online, powered by an API designed for developers. This is the official PHP library for the PaymentSpring API.
 
-PaymentSpring API keys are required.  You can obtain your own by [registering for a free PaymentSpring test account](https://www.paymentspring.com/signup). 
+PaymentSpring API keys are required. [Sign up for a free sandbox account](https://www.paymentspring.com/signup) to get your API keys. 
 
-Usage examples can be found in the `index.php` file. You can add in your own API keys in that file to test things out. To get more information on additional parameters available, visit the full [API docs](https://paymentspring.com/developers).
+Usage examples can be found in the `index.php` file. You can add your own API keys in that file to test things out. To see all of the available endpoints and parameters, [check out the API docs](https://paymentspring.com/developers).
 
 ## Installation
 
-The easiest way to user this wrapper is with composer. You can run this to add it to your composer.json.
+The easiest way to user this library is with composer. You can run this to add it to your composer.json.
 
 *Add composer information*
 
-Alternatively, you can clone this repository. You must require the `init.php` file wherever you're going to use the the wrapper. This is not required if you're using composer.
+Or, you can clone this repository. You must require the `init.php` file wherever you're going to use the this library. This is not required if you're using composer.
 
 ## Usage
 
@@ -111,7 +111,7 @@ For when you have a new customer and want to subscribe them to a plan at the sam
 ```
 
 #### Charge Token
-*Note: The API wrapper doesn't have a built in way of creating or fetching tokens. You could, however, use the `makeRequest` function*
+*Note: This library doesn't currently have a built in way of creating or fetching tokens. You could, however, use the `makeRequest` function*
 
    **PaymentSpring Token** string   
    **Amount in Cents** integer   
@@ -122,7 +122,7 @@ For when you have a new customer and want to subscribe them to a plan at the sam
 ```
 ****
 ### Custom requests
-For anything that's not covered in this, you can make custom requests.
+For any requests that are not yet included in this library, you can make custom requests. To see all of the available endpoints and parameters, [check out the API docs](https://paymentspring.com/developers).
 
 This takes 2-3 arguments. 
 
