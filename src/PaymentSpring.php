@@ -60,6 +60,13 @@ class PaymentSpring {
   
   public static function constructPostRequest($options, $params){
     $options[CURLOPT_POST] = TRUE;
+    foreach($params as $k => $v){
+      if(is_array($v)){
+        $params[$k] = json_encode($v);
+      } elseif is_bool($v) {
+        $params[$k] = $v ? 'true' : 'false';
+      }
+    }
     $options[CURLOPT_POSTFIELDS] = json_encode($params);
     return $options;
   }
