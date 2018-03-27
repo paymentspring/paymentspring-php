@@ -63,7 +63,7 @@ class PaymentSpring {
     foreach($params as $k => $v){
       if(is_array($v)){
         $params[$k] = json_encode($v);
-      } elseif is_bool($v) {
+      } elseif (is_bool($v)) {
         $params[$k] = $v ? 'true' : 'false';
       }
     }
