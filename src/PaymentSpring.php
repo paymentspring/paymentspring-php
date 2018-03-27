@@ -35,7 +35,10 @@ class PaymentSpring {
     $curlOptions = array(
       CURLOPT_RETURNTRANSFER => 1,
       CURLOPT_URL => self::$apiBaseURL . $path,
-      CURLOPT_HTTPHEADER => array('Authorization: Basic '. base64_encode( self::$privateKey . ":" ) )
+      CURLOPT_HTTPHEADER => [
+        'Authorization: Basic '. base64_encode( self::$privateKey . ":" ),
+        'Content-Type: application/json'
+      ]
     );
     if($isPost){
       $curlOptions = self::constructPostRequest($curlOptions, $params);
@@ -57,12 +60,7 @@ class PaymentSpring {
   
   public static function constructPostRequest($options, $params){
     $options[CURLOPT_POST] = TRUE;
-    foreach($params as $k => $v){
-      if(is_array($v)){
-        $params[$k] = json_encode($v);
-      }
-    }
-    $options[CURLOPT_POSTFIELDS] = $params;
+    $options[CURLOPT_POSTFIELDS] = json_encode($params);
     return $options;
   }
   
