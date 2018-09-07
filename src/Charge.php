@@ -50,4 +50,17 @@
       $options["token"] = $token;
       return self::chargeCard($options, $amount);
     }
+
+    /*
+      *
+      * Retrieve a Charge
+      *
+      * @param $chargeID string 
+      * @return JSON Object 
+    */
+
+    public static function retrieveCharge($chargeID){
+      $response = PaymentSpring::makeRequest("charge/".$chargeID);
+      return json_decode($response);
+    }
   }
